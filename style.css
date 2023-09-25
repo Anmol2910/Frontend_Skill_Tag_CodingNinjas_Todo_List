@@ -1,0 +1,163 @@
+/* Google font CDN for font styles */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Pangolin&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
+/* to remove default styles of webpage */
+*{
+    padding:0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* settting background image */
+.container{
+    width:100%;
+    height:100vh;
+    background-image:url(images/background_image_of_ToDoList.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:10px;
+    overflow: scroll;
+}
+ .todo-title{
+    display: block;;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.todo-title h1{
+    color: #2d2b2b;
+    text-shadow: 0px -6px whitesmoke;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* to create a todo list block with proper dimesnions */
+.todoblock{
+    width:100%;
+    max-width:540px;
+    background-color: #f7f6f6;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 0 rgb(0, 0, 0, 1);
+}
+
+/* styling the heading of list */
+.todoblock h2{
+    color:#351156;
+    display:flex;
+    align-items:center;
+    margin-bottom: 20px;
+    font-family: 'Dosis', sans-serif;
+}
+/* to style image within heading */
+.todoblock h2 img{
+    width: 60px;
+    margin-left:10px;
+}
+
+/* styling input section */
+.input-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:rgb(231, 234, 219);
+    border-radius:30px;
+    padding-left: 20px;
+    margin-bottom:25px;
+}
+
+input{
+    flex:1;
+    border:none;
+    outline:none;
+    background: transparent;
+    padding: 10px;
+}
+
+/* styling the add button */
+button{
+    border:none;
+    outline:none;
+    padding:16px 50px;
+    background-color: #411f60;
+    color:white;
+    border-radius: 40px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:  #583d72;
+}
+  
+/* style for the list items in todo list which were added using javascript */
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding:12px 8px 12px 50px;
+    user-select: none;
+    cursor:pointer;
+    position:relative;
+}
+
+/* to check and uncheck the list items */
+ul li::before{
+    content: '';
+    position: absolute;
+    height:28px;
+    width:28px;
+    border-radius: 50px;
+    background-image: url('images/Uncheck_Button.png');
+    background-size: cover;
+    background-position: center;
+    top:9px;
+    left:8px;
+}
+
+ul li.checked{
+    color:#1c1a1a;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url('images/Check_Button.png');
+}
+
+/* to style the cross mark in front of list items */
+ul li span{
+    position: absolute;
+    right:0;
+    top:5px;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    color:#555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background:rgb(205, 207, 209); ;
+}
+
+#taskCount{
+    margin-top:15px;
+    padding:15px;
+    color: #351156;
+    font-size:large;
+    font-family: 'Dosis', sans-serif;
+}
+.Qutoes .space{
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    color: rgb(71, 73, 76);
+
+}

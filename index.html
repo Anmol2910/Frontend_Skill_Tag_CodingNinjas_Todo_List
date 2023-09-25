@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Using Animate.CSS CDN for some animation styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>To-Do List</title>
+    
+</head>
+<body>
+   
+    <div class="container">
+        <!-- Setting title for todo list -->
+        <div class="todo-title">
+            <h1 class="animate__animated animate__backInDown">Just Do it.</h1>
+         </div>
+
+        <!-- creating a to do list using a container todoblock -->
+        <div class="todoblock">
+            <!-- heading for the to fo list -->
+            <h2 class="animate__animated animate__pulse">To-Do List <img src="images/Todo_List_Icon.jpeg" alt=""> </h2>
+
+            <!-- adding a text-field to add a list-item -->
+            <div class="input-section">
+                <input type="text" id="input-box" placeholder="Type to add text">
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <!-- empty list to add the items using javacript -->
+            <ul id="list-block">
+                <!-- <li class="checked">task 1</li>
+                <li>task 2</li>
+                <li>task 3</li> -->
+            </ul>
+            <p id="taskCount">Total tasks: <span id="count">0</span></p>
+        </div>
+        
+        <!-- Adding some Extra things to TODO list -->
+
+        <div class="Qutoes">
+        <marquee class="space" behavior="scroll" direction="left" scrollamount="5">Forget about your lists and do what you can because that's all you can do.</marquee>
+
+        <marquee class="space" behavior="scroll" direction="right" scrollamount="5">Implement whatever organizational system works best for you, but then be sure to review your to-do list at least once a week.</marquee>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
